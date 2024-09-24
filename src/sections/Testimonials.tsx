@@ -3,6 +3,9 @@ import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
 import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
+import { Card } from "@/components/Card";
+import { SectionHeader } from "@/components/SectionHeader";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -38,5 +41,30 @@ const testimonials = [
 ];
 
 export const TestimonialsSection = () => {
-  return <div>Testimonials Section</div>;
+  return <div>
+
+    <SectionHeader eyebrow="Happy Clients" title="What Client Say About Me" description="Don't just take my word for it.See what my clients have to say about my work." />
+    <div className="mt-16 flex">
+      <div className="flex  gap-8 flex-none">
+      {
+        testimonials.map((testimonial) => (
+          
+          <Card key={testimonial.name} className="max-w-xs">
+            
+            <div className="flex gap-4 items-center">
+              <div className="size-14 inline-flex bg-gray-700 items-center justify-center rounded-full flex-shrink-0 ">
+                <Image src={testimonial.avatar} alt={testimonial.name} className="max-h-full" />
+
+              </div>
+              <div>
+                <div className="font-semibold">{testimonial.name}</div>
+                <div className="text-sm text-white/40">{testimonial.position}</div>
+              </div>
+            </div>
+              <p className="mt-4 text-sm ">{testimonial.text}</p>
+          </Card>)
+        )}
+    </div>
+    </div>
+  </div>;
 };
