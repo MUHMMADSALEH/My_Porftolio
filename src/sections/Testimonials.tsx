@@ -41,15 +41,15 @@ const testimonials = [
 ];
 
 export const TestimonialsSection = () => {
-  return <div>
-
+  return <div className="py-16 lg:py-24">
+<div className="container">
     <SectionHeader eyebrow="Happy Clients" title="What Client Say About Me" description="Don't just take my word for it.See what my clients have to say about my work." />
-    <div className="mt-16 flex">
+    <div className="mt-16 flex overflow-x-clip [mask-image:linear-gradient(to_righ,transparent,black_10%,black_90%,transparent)]">
       <div className="flex  gap-8 flex-none">
       {
         testimonials.map((testimonial) => (
           
-          <Card key={testimonial.name} className="max-w-xs">
+          <Card key={testimonial.name} className="max-w-xs md:max-w-md md:p-8">
             
             <div className="flex gap-4 items-center">
               <div className="size-14 inline-flex bg-gray-700 items-center justify-center rounded-full flex-shrink-0 ">
@@ -61,10 +61,11 @@ export const TestimonialsSection = () => {
                 <div className="text-sm text-white/40">{testimonial.position}</div>
               </div>
             </div>
-              <p className="mt-4 text-sm ">{testimonial.text}</p>
+              <p className="mt-4 md:mt-6 text-sm md:text-base ">{testimonial.text}</p>
           </Card>)
         )}
     </div>
     </div>
-  </div>;
+  </div>
+  </div>
 };
