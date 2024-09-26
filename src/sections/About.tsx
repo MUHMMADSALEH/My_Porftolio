@@ -35,29 +35,41 @@ const toolboxItems = [{
 
 const hobbies = [{
   title: "playing Cricket",
-  emoji: "🏏"
+  emoji: "🏏",
+  left:"5%",
+  right:"5%"
 }, {
   title: "Photography",
-  emoji: "📷"
+  emoji: "📷",
+  left:"50%",
+  right:"5%"
 }, {
   title: "Hiking",
-  emoji: "🚶‍♀️"
+  emoji: "🚶‍♀️,",
+  left:"10%",
+  right:"35%"
 }, {
   title: "Music",
-  emoji: "🎵"
+  emoji: "🎵",
+   left:"35%",
+  right:"40%"
 }, {
   title: "Reading",
-  emoji: "📚"
+  emoji: "📚",
+  left:"70%",
+  right:"45%"
 }, {
   title: "Fitness",
-  emoji: "🤸‍♀️"
+  emoji: "🤸‍♀️",
+  left:"5%",
+  right:"65%"
 }]
 export const AboutSection = () => {
 
   return <div className="pb-20">
     <div className="container">
       <SectionHeader eyebrow="About me" title="A glimpse into my world." description="learn More About who I am ,what I do and what inspires me." />
-      <div className="mt-20">
+      <div className="mt-20 flex flex-col gap-8">
         <Card className="size-[320px]">
           <CardHeader title="My Reads" description="Explore the Books Shaping my prospective" />
 
@@ -65,18 +77,18 @@ export const AboutSection = () => {
             <Image src={BookImage} alt="Book cover" />
           </div>
         </Card>
-        <Card>
+        <Card className="size-[320px]">
         <CardHeader title="My Toolbox" description="Explore the Technologiese and tools I use to craft exceptional digital experiences." />
-          <ToolboxItems items={toolboxItems}/>
-          <ToolboxItems items={toolboxItems}/>
+          <ToolboxItems items={toolboxItems} className="mt-6 "/>
+          <ToolboxItems items={toolboxItems} className="mt-6" WrapperClassName="-translate-x-1/2"/>
         </Card>
-        <Card>
-        <CardHeader title="Beyond the Code" description="Explore my intersts and hobbies beyond the digital realm." />
-          <div>
+        <Card className="h-[320px] p-0 flex flex-col">
+        <CardHeader   title="Beyond the Code" description="Explore my intersts and hobbies beyond the digital realm." className="px-6 py-6" />
+          <div className="relative flex-1">
             {
               hobbies.map(hobby => (
-                <div>
-                  <span>{hobby.title}</span>
+                <div className="inline-flex  items-center  gap-2 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full p-1.5 px-6 absolute"  style={{left:hobby.left,right:hobby.right,}}>
+                  <span className="font-medium text-gray-950">{hobby.title}</span>
                   <span>{hobby.emoji}</span>
                 </div>
               ))
