@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 
 import memojiImage from "../assets/images/memoji-computer.png";
@@ -10,7 +11,7 @@ import { HeroOrbit } from "@/components/HeroOrbit";
 export const HeroSection = () => {
   // console.log(memojiImage);
   return (
-    <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
+    <div className="py-32 md:py-48 lg:py-60 relative z-0  overflow-x-clip">
       <div className="absolute inset-0 [mask-image:linear-grdient(to_bottom,transparent,black_10%,black_70%,transparent)]">
       <div
         className="absolute inset-0 -z-30 opacity-5"
@@ -78,12 +79,12 @@ export const HeroSection = () => {
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
           <button className="px-6  h-12  border border-white/15 rounded-xl  inline-flex items-center gap-2">
-            <span className="font-semibold">Explore My work</span>
+            <span className="font-semibold cursor-pointer z-10">Explore My work</span>
             <ArrowDown className="size-4" />
           </button>
-          <button className="inline-flex  items-center gap-2 bg-white  text-gray-900 font-semibold border border-white rounded-xl h-12 px-4 ">
+          <button  onClick={()=>alert("hello")} className="inline-flex  items-center gap-2 bg-white  text-gray-900 font-semibold border border-white cursor-pointer z-10 rounded-xl h-12 px-4 ">
             <span className="text-2xl">👋</span>
-            <span className="font-semibold cursor-pointer">Let&#39;s Connect</span>
+            <span className="font-semibold ">Let&#39;s Connect</span>
           </button>
         </div>
       </div>
