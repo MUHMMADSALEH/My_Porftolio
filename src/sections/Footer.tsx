@@ -6,7 +6,7 @@ const footerLinks=[{
 
 },{
   title:"Github",
-  href:"#"
+  href:"https://github.com/MUHMMADSALEH/"
 
 },{
   title:"Twitter",
@@ -27,7 +27,7 @@ export const Footer = () => {
   <nav className="flex flex-col gap-8 items-center md:flex-row">
 {
   footerLinks.map(link=>(
-    <a href={link.href} key={link.title} className="inline-flex items-center gap-1.5"><span className="font-semibold">{link.title}</span>
+    <a href={link?.href} key={link?.title} className="inline-flex items-center gap-1.5 cursor-pointer"><span className="font-semibold">{link?.title}</span>
     <ArrowRightIcon className="size-4"/>
     </a>
   ))

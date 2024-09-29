@@ -81,9 +81,9 @@ export const HeroSection = () => {
             <span className="font-semibold">Explore My work</span>
             <ArrowDown className="size-4" />
           </button>
-          <button className="inline-flex  items-center gap-2 bg-white  text-gray-900 font-semibold border border-white rounded-xl h-12 px-4 cursor-pointer">
+          <button className="inline-flex  items-center gap-2 bg-white  text-gray-900 font-semibold border border-white rounded-xl h-12 px-4 ">
             <span className="text-2xl">👋</span>
-            <span className="font-semibold">Let&#39;s Connect</span>
+            <span className="font-semibold cursor-pointer">Let&#39;s Connect</span>
           </button>
         </div>
       </div>
