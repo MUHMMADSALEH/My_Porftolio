@@ -82,7 +82,7 @@ export const HeroSection = () => {
             <span className="font-semibold cursor-pointer z-10">Explore My work</span>
             <ArrowDown className="size-4" />
           </button>
-          <button  onClick={()=>alert("hello")} className="inline-flex  items-center gap-2 bg-white  text-gray-900 font-semibold border border-white cursor-pointer z-10 rounded-xl h-12 px-4 ">
+          <button onClick={()=> window.location.href = "mailto:khanmohdsaleh2002@gmail.com?subject=Project Inquiry&body=Hello, I would like to discuss a project with you."} className="inline-flex  items-center gap-2 bg-white  text-gray-900 font-semibold border border-white cursor-pointer z-10 rounded-xl h-12 px-4 ">
             <span className="text-2xl">👋</span>
             <span className="font-semibold ">Let&#39;s Connect</span>
           </button>

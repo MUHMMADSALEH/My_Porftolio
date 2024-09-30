@@ -3,7 +3,7 @@ import grainImage from "../assets/images/grain.jpg"
 export const ContactSection = () => {
   return <section   id="contact" className='py-16 pt-12 lg:py-24 lg:pt-20'>
     <div className='container '>
-      <div className='bg-gradient-to-tr from-emerald-300 to-sky-400 text-gray-950 py-8 px-10 rounded-3xl text-center md:text-left relative z-0 overflow-hidden'>
+      <div className='  bg-gradient-to-tr from-emerald-300 to-sky-400 text-gray-950 py-8 px-10 rounded-3xl text-center md:text-left relative -z-12 overflow-hidden '>
         <div className='absolute inset-0 -z-10 opacity-5' style={{
           backgroundImage: `url(${grainImage.src})`
         }}></div>
@@ -16,7 +16,7 @@ export const ContactSection = () => {
             <p className='text-sm mt-2 md:text-base '>Ready to bring your next project life? Let's connect and discuss how I can help you achieve your goal.</p>
           </div>
           <div>
-            <button className=' inline-flex items-center gap-2 px-6 h-12 bg-gray-900 rounded-xl text-white w-max border border-gray-900 '>
+            <button onClick={()=> window.location.href = "mailto:khanmohdsaleh2002@gmail.com?subject=Project Inquiry&body=Hello, I would like to discuss a project with you."} className=' inline-flex items-center gap-2 px-6 h-12 bg-gray-900 rounded-xl text-white w-max border border-gray-900 absolute z-20  '>
               <span className='font-semibold'>Contact Me</span>
               <ArrowUpRight className="size-4" />
             </button>
