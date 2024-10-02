@@ -7,7 +7,7 @@ import { HeroSection } from "@/sections/Hero";
 import { ProjectsSection } from "@/sections/Projects";
 import { TapeSection } from "@/sections/Tape";
 import { TestimonialsSection } from "@/sections/Testimonials";
-import {Link} from "react-scroll"
+
 
 export default function Home() {
 
@@ -19,7 +19,7 @@ export default function Home() {
     <TapeSection/>
     <TestimonialsSection/>
     <AboutSection/>
-    <Link activeClass="active" to="contact" spy={true} smooth={true} offset={-100} duration={600}><ContactSection/></Link>
+    <ContactSection/>
     <Footer/>
    </div>
   );

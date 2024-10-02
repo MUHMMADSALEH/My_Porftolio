@@ -2,30 +2,45 @@
 
 import { Card } from "@/components/Card";
 import { SectionHeader } from "@/components/SectionHeader";
-import StarIcon from "../assets/icons/star.svg"
+
 import Image from "next/image";
 import BookImage from "../assets/images/book-cover.png"
 import JavascriptIcon from "../assets/icons/square-js.svg"
 import HTMLIcon from "../assets/icons/html5.svg"
 import CSSIcon from "../assets/icons/css3.svg"
 import GithubIcon from "../assets/icons/github.svg"
-import ChromeIcon from "../assets/icons/chrome.svg"
+
 import ReactIcon from "../assets/icons/react.svg"
-import { TechIcon } from "@/components/TechIcon";
+
 import mapImage from "../assets/images/map.png"
 import smileMemoji from "../assets/images/memoji-smile.png"
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
-import { title } from "process";
+
 import {motion} from "framer-motion"
 import { useRef } from "react";
+import NodeIcon from "../assets/icons/node.svg"
+import NextjsIcon from "../assets/icons/nextjs.svg"
 
 
 
-const toolboxItems = [{
+const toolboxItems = [
+  {
+    title:"Node",
+    iconType:NodeIcon
+  },
+  {
   title: "javaScript",
   iconType: JavascriptIcon
-}, {
+},
+{
+  title: "Nextjs",
+  iconType: NextjsIcon
+},{title:"React",
+  iconType:ReactIcon
+},
+
+{
   title: "HTML5",
   iconType: HTMLIcon
 }, {
@@ -34,11 +49,6 @@ const toolboxItems = [{
 }, {
   title: "Github",
   iconType: GithubIcon
-}, {
-  title: "Chrome",
-  iconType: ChromeIcon
-},{title:"React",
-  iconType:ReactIcon
 }]
 
 const hobbies = [{

@@ -12,8 +12,8 @@ export const ContactSection = () => {
 
 
           <div>
-            <h1 className=' font-serif  text-2xl md:text-3xl  '>Let's create something amazing together.</h1>
-            <p className='text-sm mt-2 md:text-base '>Ready to bring your next project life? Let's connect and discuss how I can help you achieve your goal.</p>
+            <h1 className=' font-serif  text-2xl md:text-3xl  '>Let &apos;s create something amazing together.</h1>
+            <p className='text-sm mt-2 md:text-base '>Ready to bring your next project life? Let &apos;s connect and discuss how I can help you achieve your goal.</p>
           </div>
           <div>
             <button onClick={()=> window.location.href = "mailto:khanmohdsaleh2002@gmail.com?subject=Project Inquiry&body=Hello, I would like to discuss a project with you."} className=' inline-flex items-center gap-2 px-6 h-12 bg-gray-900 rounded-xl text-white w-max border border-gray-900 absolute z-20  '>
