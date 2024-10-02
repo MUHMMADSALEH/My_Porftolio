@@ -80,12 +80,12 @@ export const HeroSection = () => {
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
           <Link to="projects" smooth={true} duration={500}>
-          <button className="px-6  h-12  border border-white/15 rounded-xl  inline-flex items-center gap-2">
+          <button className="px-6  h-12  border border-white/15 rounded-xl  inline-flex items-center z-10 cursor-pointer  gap-2">
             <span className="font-semibold cursor-pointer z-10">Explore My work</span>
-            <ArrowDown className="size-4" />
+            <ArrowDown className="size-4 " />
           </button>
           </Link>
-         <a href="./MUHMMAD_SALEH.pdf" download={"MUHMMAD_SALEH"}><button className="px-6  h-12  border border-white/15 rounded-xl  inline-flex items-center z-10 gap-2"><span className="font-semibold cursor-pointer z-10">Resume</span>
+         <a href="./MUHMMAD_SALEH.pdf" download={"MUHMMAD_SALEH"}><button className="px-6  h-12  border border-white/15 rounded-xl  inline-flex items-center  gap-2"><span className="font-semibold cursor-pointer z-10">Resume</span>
           <ArrowDown className="size-4 z-10 cursor-pointer"/>
           </button></a> 
           <button onClick={()=> window.location.href = "mailto:khanmohdsaleh2002@gmail.com?subject=Project Inquiry&body=Hello, I would like to discuss a project with you."} className="inline-flex  items-center gap-2 bg-white  text-gray-900 font-semibold border border-white cursor-pointer z-10 rounded-xl h-12 px-4 ">
