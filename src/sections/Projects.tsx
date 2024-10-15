@@ -1,6 +1,7 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import mySchdulerr from "@/assets/images/my-schedulerr.png";
+// import  darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png"
+// import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
+// import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import Image from "next/image";
 import CheckCircleIcon from "../assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "../assets/icons/arrow-up-right.svg";
@@ -8,42 +9,58 @@ import grainImage from "../assets/images/grain.jpg";
 import { Card } from "@/components/Card";
 
 const portfolioProjects = [
+ 
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "Personal Paroject",
+    year: "2024",
+    title: "My Schedulerr",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Developed a scheduler platform using Next.js with app router, achieving a 30% increase in routing efficiency." },
+      { title: "Integrated Clerk for authentication, enhancing user login/signup processes by 40% in speed and ensuring secure access." },
+      { title: "Integrated Google Calendar API for seamless meeting scheduling, improving event management efficiency by 25%." },
+      { title: "Built features allowing users to provide their availability and create events, resulting in 20% higher booking success rate." },
+      { title: "Managed data using NeonDB with Prisma ORM, improving query performance by 35%." },
+      { title: "Designed the UI with ShadCN components, boosting user satisfaction and engagement by 15% with a modern, responsive interface." },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: " https://my-schedulerr.vercel.app/",
+    image: mySchdulerr
   },
-  {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
-    results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
-    ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
-  },
-  {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
-  },
+  // {
+  //   company: "Acme Corp",
+  //   year: "2022",
+  //   title: "Dark Saas Landing Page",
+  //   results: [
+  //     { title: "Enhanced user experience by 40%" },
+  //     { title: "Improved site speed by 50%" },
+  //     { title: "Increased mobile traffic by 35%" },
+  //   ],
+  //   link: "/",
+  //   image: darkSaasLandingPage,
+  // },
+  // {
+  //   company: "Innovative Co",
+  //   year: "2021",
+  //   title: "/",
+  //   results: [
+  //     { title: "Boosted sales by 20%" },
+  //     { title: "Expanded customer reach by 35%" },
+  //     { title: "Increased brand awareness by 15%" },
+  //   ],
+  //   link: "/",
+  //   image: lightSaasLandingPage,
+  // },
+  // {
+  //   company: "Quantum Dynamics",
+  //   year: "2023",
+  //   title: "AI Startup Landing Page",
+  //   results: [
+  //     { title: "Enhanced user experience by 40%" },
+  //     { title: "Improved site speed by 50%" },
+  //     { title: "Increased mobile traffic by 35%" },
+  //   ],
+  //   link: "/",
+  //   image: aiStartupLandingPage,
+  // },
 ];
 
 export const ProjectsSection = () => {
