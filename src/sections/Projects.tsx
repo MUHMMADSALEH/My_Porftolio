@@ -1,4 +1,4 @@
-import mySchdulerr from "../assets/images/my-schedulerr.png";
+
 // import  darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png"
 // import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 // import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
@@ -23,7 +23,7 @@ const portfolioProjects = [
       { title: "Designed the UI with ShadCN components, boosting user satisfaction and engagement by 15% with a modern, responsive interface." },
     ],
     link: " https://my-schedulerr.vercel.app/",
-    image: mySchdulerr
+    image: "/my-schedulerr.png"
   },
   // {
   //   company: "Acme Corp",
