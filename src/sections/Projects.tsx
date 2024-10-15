@@ -1,4 +1,4 @@
-import mySchdulerr from "@/assets/images/my-schedulerr.png";
+import mySchdulerr from "../assets/images/my-schedulerr.png";
 // import  darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png"
 // import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 // import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
