@@ -1,5 +1,5 @@
 
-// import  darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png"
+import  darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png"
 // import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 // import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import Image from "next/image";
@@ -22,18 +22,18 @@ const portfolioProjects = [
     link: " https://my-schedulerr.vercel.app/",
     image: "/my-schedulerr.png"
   },
-  // {
-  //   company: "Acme Corp",
-  //   year: "2022",
-  //   title: "Dark Saas Landing Page",
-  //   results: [
-  //     { title: "Enhanced user experience by 40%" },
-  //     { title: "Improved site speed by 50%" },
-  //     { title: "Increased mobile traffic by 35%" },
-  //   ],
-  //   link: "/",
-  //   image: darkSaasLandingPage,
-  // },
+  {
+    company: "Acme Corp",
+    year: "2022",
+    title: "Dark Saas Landing Page",
+    results: [
+      { title: "Enhanced user experience by 40%" },
+      { title: "Improved site speed by 50%" },
+      { title: "Increased mobile traffic by 35%" },
+    ],
+    link: "/",
+    image: darkSaasLandingPage,
+  },
   // {
   //   company: "Innovative Co",
   //   year: "2021",
