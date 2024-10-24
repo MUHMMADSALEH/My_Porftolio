@@ -15,12 +15,9 @@ const portfolioProjects = [
     year: "2024",
     title: "My Schedulerr",
     results: [
-      { title: "Developed a scheduler platform using Next.js with app router, achieving a 30% increase in routing efficiency." },
-      { title: "Integrated Clerk for authentication, enhancing user login/signup processes by 40% in speed and ensuring secure access." },
-      { title: "Integrated Google Calendar API for seamless meeting scheduling, improving event management efficiency by 25%." },
-      { title: "Built features allowing users to provide their availability and create events, resulting in 20% higher booking success rate." },
-      { title: "Managed data using NeonDB with Prisma ORM, improving query performance by 35%." },
-      { title: "Designed the UI with ShadCN components, boosting user satisfaction and engagement by 15% with a modern, responsive interface." },
+      { title: "Schedulerr helps you to manage your time effectively."},
+      { title: "Create events ,set your availability,and let others book time with you seamlessly." },
+
     ],
     link: " https://my-schedulerr.vercel.app/",
     image: "/my-schedulerr.png"
