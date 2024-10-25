@@ -5,7 +5,7 @@ import { twMerge } from "tailwind-merge";
 
 export const metadata: Metadata = {
   title: "My Portfolio",
-  description: "Created with the help of Frontend Tribe",
+  description: "Created with by Saleh",
 };
 const inter=Inter({subsets:["latin"],variable:"--font-sans"})
 const calistoga=Calistoga({subsets:["latin"],variable:"--font-serif",weight:["400"]})
