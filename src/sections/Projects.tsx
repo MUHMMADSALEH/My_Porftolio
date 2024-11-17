@@ -31,7 +31,7 @@ const portfolioProjects = [
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "/",
+    link: "https://saas-website-dark-landing-page-tau.vercel.app/",
     image: darkSaasLandingPage,
   },
   // {
