@@ -7,6 +7,7 @@ import CheckCircleIcon from "../assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "../assets/icons/arrow-up-right.svg";
 import grainImage from "../assets/images/grain.jpg";
 import { Card } from "@/components/Card";
+import mySchedulerrLandingPage from "@/assets/images/my-schedulerr.png"
 
 const portfolioProjects = [
  
@@ -20,7 +21,7 @@ const portfolioProjects = [
 
     ],
     link: " https://my-schedulerr.vercel.app/",
-    image: "/my-schedulerr.png"
+    image: mySchedulerrLandingPage
   },
   {
     company: "Acme Corp",
