@@ -8,8 +8,33 @@ import ArrowUpRightIcon from "../assets/icons/arrow-up-right.svg";
 import grainImage from "../assets/images/grain.jpg";
 import { Card } from "@/components/Card";
 import mySchedulerrLandingPage from "@/assets/images/my-schedulerr.png"
+import myImdb from "@/assets/images/my-imdb.png"
 
 const portfolioProjects = [
+  {
+    company: "Personal Projects",
+    year: "2024",
+    title: "My IMDb Mini",
+    results: [
+      { title: "User can find latest movies." },
+      { title: "Fillter movies based on Trending and Top rated." },
+      { title: "User can search movie by title. " },
+      { title: "There is a light dark theme also for user convineince. " },
+    ],
+    link: "https://my-imdb-6ztd9acqc-muhmmad-saleh-s-projects.vercel.app/",
+    image: myImdb,
+  },{
+    company: "Personal Projects",
+    year: "2024",
+    title: "Dark Saas Landing Page",
+    results: [
+      { title: "Enhanced user experience by 40%" },
+      { title: "Improved site speed by 50%" },
+      { title: "Increased mobile traffic by 35%" },
+    ],
+    link: "https://saas-website-dark-landing-page-tau.vercel.app/",
+    image: darkSaasLandingPage,
+  },
  
   {
     company: "Personal Paroject",
@@ -23,18 +48,7 @@ const portfolioProjects = [
     link: " https://my-schedulerr.vercel.app/",
     image: mySchedulerrLandingPage
   },
-  {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://saas-website-dark-landing-page-tau.vercel.app/",
-    image: darkSaasLandingPage,
-  },
+  
   // {
   //   company: "Innovative Co",
   //   year: "2021",
