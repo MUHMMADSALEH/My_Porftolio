@@ -14,18 +14,6 @@ const portfolioProjects = [
   {
     company: "Personal Projects",
     year: "2024",
-    title: "My IMDb Mini",
-    results: [
-      { title: "User can find latest movies." },
-      { title: "Fillter movies based on Trending and Top rated." },
-      { title: "User can search movie by title. " },
-      { title: "There is a light dark theme also for user convineince. " },
-    ],
-    link: "https://my-imdb-6ztd9acqc-muhmmad-saleh-s-projects.vercel.app/",
-    image: myImdb,
-  },{
-    company: "Personal Projects",
-    year: "2024",
     title: "Dark Saas Landing Page",
     results: [
       { title: "Enhanced user experience by 40%" },
@@ -47,6 +35,19 @@ const portfolioProjects = [
     ],
     link: " https://my-schedulerr.vercel.app/",
     image: mySchedulerrLandingPage
+  },
+  {
+    company: "Personal Projects",
+    year: "2024",
+    title: "My IMDb Mini",
+    results: [
+      { title: "User can find latest movies." },
+      { title: "Fillter movies based on Trending and Top rated." },
+      { title: "User can search movie by title. " },
+      { title: "There is a light dark theme also for user convineince. " },
+    ],
+    link: "https://my-imdb-6ztd9acqc-muhmmad-saleh-s-projects.vercel.app/",
+    image: myImdb,
   },
   
   // {
@@ -123,7 +124,7 @@ export const ProjectsSection = () => {
                     ))}
                   </ul>
 
-                  <a href={project.link}>
+                  <a href={project.link} target="_blank">
                     <button className="bg-white h-12 w-full md:w-auto rounded-xl text-gray-950 font-semibold inline-flex items-center justify-center mt-8 -mb-4 px-6 md:-md-0 ">
                       <span>Visit Live Site</span>
                       <ArrowUpRightIcon />
