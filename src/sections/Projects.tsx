@@ -9,8 +9,26 @@ import grainImage from "../assets/images/grain.jpg";
 import { Card } from "@/components/Card";
 import mySchedulerrLandingPage from "@/assets/images/my-schedulerr.png"
 import myImdb from "@/assets/images/my-imdb.png"
+import tossAI from "@/assets/images/toss-ai.png"
 
 const portfolioProjects = [
+  {
+    company: "TechCurators",
+    year: "2024",
+    title: "TossAI",
+    results: 
+      [
+        { "title": "Optimized frontend performance, reducing load times by 25% with code-splitting & efficient components." },
+        { "title": "Developed TOSS, a SaaS platform boosting online presence & growth, increasing engagement by 30%." },
+        { "title": "Built a high-performance frontend with Next.js, cutting load times by 40% for a seamless experience." },
+        { "title": "Engineered a scalable Node.js backend with 99.9% uptime, handling high-traffic loads on AWS EC2." }
+      ],
+      
+    link: "https://tosshq.com/",
+    image: tossAI,
+  },
+
+
   {
     company: "Personal Projects",
     year: "2024",
