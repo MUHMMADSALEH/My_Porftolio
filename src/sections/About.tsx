@@ -12,7 +12,7 @@ import GithubIcon from "../assets/icons/github.svg"
 
 import ReactIcon from "../assets/icons/react.svg"
 
-import mapImage from "../assets/images/map.png"
+import mapImage from "../assets/images/mapImage.png"
 import smileMemoji from "../assets/images/memoji-smile.png"
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";

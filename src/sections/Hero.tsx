@@ -71,7 +71,7 @@ export const HeroSection = () => {
         </div>
         <div className="max-w-lg mx-auto">
           <h1 className="font-serif text-3xl md:text-5xl mt-8 text-center tracking-wide">
-            Buillding Exeptional User Experiences
+            Buillding Exceptional User Experiences
           </h1>
           <p className="mt-4 text-center  text-white/60 md:text-lg">
            Hi,My name is Muhmmad Saleh. I specialize in transforming design into functional, high performing
