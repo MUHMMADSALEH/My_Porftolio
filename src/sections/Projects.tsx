@@ -8,6 +8,7 @@ import ArrowUpRightIcon from "../assets/icons/arrow-up-right.svg";
 import grainImage from "../assets/images/grain.jpg";
 import { Card } from "@/components/Card";
 import mySchedulerrLandingPage from "@/assets/images/my-schedulerr.png"
+import aiJournalingApp from "@/assets/images/ai-journaling-app.png"
 import myImdb from "@/assets/images/my-imdb.png"
 import tossAI from "@/assets/images/toss-ai.png"
 
@@ -29,17 +30,29 @@ const portfolioProjects = [
   },
 
 
+  // {
+  //   company: "Personal Projects",
+  //   year: "2024",
+  //   title: "Dark Saas Landing Page",
+  //   results: [
+  //     { title: "Enhanced user experience by 40%" },
+  //     { title: "Improved site speed by 50%" },
+  //     { title: "Increased mobile traffic by 35%" },
+  //   ],
+  //   link: "https://saas-website-dark-landing-page-tau.vercel.app/",
+  //   image: darkSaasLandingPage,
+  // }, 
   {
     company: "Personal Projects",
-    year: "2024",
-    title: "Dark Saas Landing Page",
+    year: "2025",
+    title: "AI Journaling App",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Users can chat with an AI assistant (via Gemini API) in a simple chat-style interface to summarize their day, get motivation for tomorrow, and receive suggestions for weekly improvement, with daily mood tags added through sentiment analysis." },
+      { title: "All conversations are securely stored in MongoDB per user, grouped by date with AI-generated reflections, and protected by JWT-based sign-up/login for a private journaling experience." },
+      
     ],
-    link: "https://saas-website-dark-landing-page-tau.vercel.app/",
-    image: darkSaasLandingPage,
+    link: "https://devvoid-frontend.vercel.app/",
+    image: aiJournalingApp,
   },
  
   {
@@ -54,19 +67,19 @@ const portfolioProjects = [
     link: " https://my-schedulerr.vercel.app/",
     image: mySchedulerrLandingPage
   },
-  {
-    company: "Personal Projects",
-    year: "2024",
-    title: "My IMDb Mini",
-    results: [
-      { title: "User can find latest movies." },
-      { title: "Fillter movies based on Trending and Top rated." },
-      { title: "User can search movie by title. " },
-      { title: "There is a light dark theme also for user convineince. " },
-    ],
-    link: "https://my-imdb-6ztd9acqc-muhmmad-saleh-s-projects.vercel.app/",
-    image: myImdb,
-  },
+  // {
+  //   company: "Personal Projects",
+  //   year: "2024",
+  //   title: "My IMDb Mini",
+  //   results: [
+  //     { title: "User can find latest movies." },
+  //     { title: "Fillter movies based on Trending and Top rated." },
+  //     { title: "User can search movie by title. " },
+  //     { title: "There is a light dark theme also for user convineince. " },
+  //   ],
+  //   link: "https://my-imdb-6ztd9acqc-muhmmad-saleh-s-projects.vercel.app/",
+  //   image: myImdb,
+  // },
   
   // {
   //   company: "Innovative Co",
