@@ -1,84 +1,64 @@
-import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
-import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
-import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
-import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
-import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
+import type { StaticImageData } from "next/image";
+import memojiAvatar from "@/assets/images/memoji-avatar-1.png";
 import { Card } from "@/components/Card";
 import { SectionHeader } from "@/components/SectionHeader";
 import Image from "next/image";
-import { Fragment } from "react";
 
-const testimonials = [
+type Recommendation = {
+  name: string;
+  position: string;
+  organization: string;
+  text: string;
+  avatar?: StaticImageData;
+  initials?: string;
+};
+
+const recommendations: Recommendation[] = [
   {
     name: "Harneet Singh",
-    position: "Co-founder @ Techcurators",
+    position: "Co-founder",
+    organization: "TechCurators",
     text: "Without a doubt, I confidently recommend Muhmmad Saleh to join your team. As a dedicated and hardworking Intern and an all-rounder, I know that he will be a beneficial addition to your organization.",
-    avatar: memojiAvatar1,
-  }, 
-  // {
-  //   name: "Alex Turner",
-  //   position: "Marketing Manager @ TechStartups",
-  //   text: "Saleh was instrumental in transforming our website into a powerful marketing tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
-  //   avatar: memojiAvatar1,
-  // },
-  // {
-  //   name: "Olivia Green",
-  //   position: "Head of Design @ GreenLeaf",
-  //   text: "Working with Saleh was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
-  //   avatar: memojiAvatar2,
-  // },
-  // {
-  //   name: "Daniel White",
-  //   position: "CEO @ InnovateCo",
-  //   text: "Saleh's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
-  //   avatar: memojiAvatar3,
-  // },
-  // {
-  //   name: "Emily Carter",
-  //   position: "Product Manager @ GlobalTech",
-  //   text: "Saleh is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
-  //   avatar: memojiAvatar4,
-  // },
-  // {
-  //   name: "Michael Brown",
-  //   position: "Director of IT @ MegaCorp",
-  //   text: "Saleh's work on our website has been nothing short of exceptional. He's a talented developer who is also a great communicator. We highly recommend him.",
-  //   avatar: memojiAvatar5,
-  // },
+    avatar: memojiAvatar,
+  },
+  {
+    name: "Pooja Saroj",
+    position: "Senior HR Executive",
+    organization: "SDLC Corp · Codefork Technologies Pvt Ltd",
+    text: "I found Muhmmad to be sincere, meticulous, and a keen learner. He built strong working relationships with his teammates and supervisors, and I highly recommend him for future opportunities. He would be a great asset to any organization.",
+    initials: "PS",
+  },
 ];
 
-export const TestimonialsSection = () => {
-  return <div className="py-16 lg:py-24">
+export const TestimonialsSection = () => (
+  <section className="py-16 lg:py-24">
     <div className="container">
-      <SectionHeader eyebrow="Happy Clients" title="What Employer  Say About Me" description="Don't just take my word for it.See what my Employer have to say about my work." />
-      <div className="mt-12 lg:mt-20 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 -my-4">
-        <div className="flex  gap-8 flex-none animate-move-left [animation-duration:90s]">
-          {
-            [...new Array(2).fill(0).map((_, idx) => <Fragment key={idx}>
-
-              {
-                testimonials.map((testimonial) => (
-
-                  <Card key={testimonial.name} className="max-w-xs md:max-w-md p-6 md:p-8 hover:-rotate-3 transition duration-300">
-
-                    <div className="flex gap-4 items-center">
-                      <div className="size-14 inline-flex bg-gray-700 items-center justify-center rounded-full flex-shrink-0 ">
-                        <Image src={testimonial.avatar} alt={testimonial.name} className="max-h-full" />
-
-                      </div>
-                      <div>
-                        <div className="font-semibold">{testimonial.name}</div>
-                        <div className="text-sm text-white/40">{testimonial.position}</div>
-                      </div>
-                    </div>
-                    <p className="mt-4 md:mt-6 text-sm md:text-base ">{testimonial.text}</p>
-                  </Card>)
+      <SectionHeader
+        eyebrow="Recommendation"
+        title="A note from TechCurators"
+        description="Recommendations from people I worked with at TechCurators and SDLC Corp."
+      />
+      <div className="mt-12 grid gap-6 lg:mt-20 md:grid-cols-2">
+        {recommendations.map((recommendation) => (
+          <Card key={recommendation.name} className="p-6 md:p-8">
+            <div className="flex items-center gap-4">
+              <div className="inline-flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-full bg-gray-700">
+                {recommendation.avatar ? (
+                  <Image src={recommendation.avatar} alt="" className="max-h-full" />
+                ) : (
+                  <span aria-hidden="true" className="font-semibold text-emerald-200">{recommendation.initials}</span>
                 )}
-            </Fragment>)]
-          }
-
-        </div>
+              </div>
+              <div>
+                <div className="font-semibold">{recommendation.name}</div>
+                <div className="text-sm text-white/60">{recommendation.position}</div>
+                <div className="text-sm text-white/60">{recommendation.organization}</div>
+              </div>
+            </div>
+            <p className="mt-4 text-sm md:mt-6 md:text-base">{recommendation.text}</p>
+          </Card>
+        ))}
       </div>
     </div>
-  </div>
-};
+  </section>
+);

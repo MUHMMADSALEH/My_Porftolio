@@ -8,6 +8,7 @@ import StarIcon from "../assets/icons/star.svg";
 import SparkleIcon from "../assets/icons/sparkle.svg";
 import { HeroOrbit } from "@/components/HeroOrbit";
 import { Link } from "react-scroll";
+import { portfolioContent } from "@/content/portfolio";
 
 export const HeroSection = () => {
   // console.log(memojiImage);
@@ -71,11 +72,10 @@ export const HeroSection = () => {
         </div>
         <div className="max-w-lg mx-auto">
           <h1 className="font-serif text-3xl md:text-5xl mt-8 text-center tracking-wide">
-            Buillding Exceptional User Experiences
+            {portfolioContent.headline}
           </h1>
           <p className="mt-4 text-center  text-white/60 md:text-lg">
-           Hi,My name is Muhmmad Saleh. I specialize in transforming design into functional, high performing
-            web application. Let&#39;s disscus your next projects
+            {portfolioContent.hero} {portfolioContent.introduction}
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
@@ -85,9 +85,10 @@ export const HeroSection = () => {
             <ArrowDown className="size-4 " />
           </button>
           </Link>
-         <a href="./MUHMMAD_SALEH.pdf" download={"MUHMMAD_SALEH"}><button className="px-6  h-12  border border-white/15 rounded-xl  inline-flex items-center  gap-2"><span className="font-semibold cursor-pointer z-10">Resume</span>
-          <ArrowDown className="size-4 z-10 cursor-pointer"/>
-          </button></a> 
+          <a href="/MUHMMAD_SALEH.pdf" download="MUHMMAD_SALEH.pdf" className="px-6 h-12 border border-white/15 rounded-xl inline-flex items-center gap-2">
+            <span className="font-semibold">Download resume</span>
+            <ArrowDown className="size-4" />
+          </a>
           <button onClick={()=> window.location.href = "mailto:khanmohdsaleh2002@gmail.com?subject=Project Inquiry&body=Hello, I would like to discuss a project with you."} className="inline-flex  items-center gap-2 bg-white  text-gray-900 font-semibold border border-white cursor-pointer z-10 rounded-xl h-12 px-4 ">
             <span className="text-2xl">👋</span>
             <span className="font-semibold ">Let&#39;s Connect</span>

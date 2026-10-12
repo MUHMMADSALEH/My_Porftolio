@@ -12,14 +12,14 @@ export const ContactSection = () => {
 
 
           <div>
-            <h1 className=' font-serif  text-2xl md:text-3xl  '>Let &apos;s create something amazing together.</h1>
-            <p className='text-sm mt-2 md:text-base '>Ready to bring your next project life? Let&apos;s connect and discuss how I can help you achieve your goal.</p>
+            <h2 className='font-serif text-2xl md:text-3xl'>Need a Node.js engineer for your next product?</h2>
+            <p className='text-sm mt-2 md:text-base'>I’m open to senior backend roles and freelance projects involving APIs, integrations, and full-stack product work.</p>
           </div>
           <div >
-            <button onClick={()=> window.location.href = "mailto:khanmohdsaleh2002@gmail.com?subject=Project Inquiry&body=Hello, I would like to discuss a project with you."} className=' inline-flex items-center gap-2 px-6 h-12 bg-gray-900 rounded-xl text-white w-max border border-gray-900  '>
+            <a href="mailto:khanmohdsaleh2002@gmail.com?subject=Project%20Inquiry" className='inline-flex items-center gap-2 px-6 h-12 bg-gray-900 rounded-xl text-white w-max border border-gray-900'>
               <span className='font-semibold'>Contact Me</span>
               <ArrowUpRight className="size-4" />
-            </button>
+            </a>
           </div>
         </div>
       </div>

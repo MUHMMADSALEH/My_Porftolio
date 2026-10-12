@@ -4,53 +4,13 @@ import { Card } from "@/components/Card";
 import { SectionHeader } from "@/components/SectionHeader";
 
 import Image from "next/image";
-import BookImage from "../assets/images/book-cover.png"
-import JavascriptIcon from "../assets/icons/square-js.svg"
-import HTMLIcon from "../assets/icons/html5.svg"
-import CSSIcon from "../assets/icons/css3.svg"
-import GithubIcon from "../assets/icons/github.svg"
-
-import ReactIcon from "../assets/icons/react.svg"
-
 import mapImage from "../assets/images/mapImage.png"
 import smileMemoji from "../assets/images/memoji-smile.png"
 import { CardHeader } from "@/components/CardHeader";
-import { ToolboxItems } from "@/components/ToolboxItems";
+import { portfolioContent } from "@/content/portfolio";
 
 import {motion} from "framer-motion"
 import { useRef } from "react";
-import NodeIcon from "../assets/icons/node.svg"
-import NextjsIcon from "../assets/icons/nextjs.svg"
-
-
-
-const toolboxItems = [
-  {
-    title:"Node",
-    iconType:NodeIcon
-  },
-  {
-  title: "javaScript",
-  iconType: JavascriptIcon
-},
-{
-  title: "Nextjs",
-  iconType: NextjsIcon
-},{title:"React",
-  iconType:ReactIcon
-},
-
-{
-  title: "HTML5",
-  iconType: HTMLIcon
-}, {
-  title: "CSS3",
-  iconType: CSSIcon
-}, {
-  title: "Github",
-  iconType: GithubIcon
-}]
-
 const hobbies = [{
   title: "playing Cricket",
   emoji: "🏏",
@@ -87,20 +47,28 @@ export const AboutSection = () => {
 
   return <div id="about" className="py-20 lg:py-28 ">
     <div className="container">
-      <SectionHeader eyebrow="About me" title="A glimpse into my world." description="learn More About who I am ,what I do and what inspires me." />
+      <SectionHeader eyebrow="About me" title="Backend systems, built for real products." description={portfolioContent.introduction} />
       <div className="mt-20 flex flex-col gap-8">
         <div className=" grid grid-cols-1 gap-8 md:grid md:grid-cols-5  lg:grid-cols-3">
         <Card className="h-[320px] md:col-span-2 lg:col-span-1"  >
-          <CardHeader title="My Reads" description="Explore the Books Shaping my prospective" />
+          <CardHeader title="What I build" description="Backend services and full-stack product features." />
 
-          <div className="w-40 mx-auto mt-2 md:mt-0">
-            <Image src={BookImage} alt="Book cover" />
+          <div className="px-6 pb-6 text-sm leading-6 text-white/65">
+            <p>APIs and integrations that connect product workflows.</p>
+            <p className="mt-3">Queues and event-driven jobs for asynchronous work.</p>
+            <p className="mt-3">Real-time updates, payments, and secure service integrations.</p>
           </div>
         </Card>
         <Card className="h-[320px] md:col-span-3 lg:col-span-2">
-        <CardHeader title="My Toolbox" description="Explore the Technologiese and tools I use to craft exceptional digital experiences." />
-          <ToolboxItems items={toolboxItems} className="animate-move-left [animation-duration:30s]"/>
-          <ToolboxItems items={toolboxItems} className="mt-6 animate-move-right [animation-duration:30s]" WrapperClassName="-translate-x-1/2"/>
+        <CardHeader title="Technical skills" description={portfolioContent.skillsIntro} />
+          <div className="grid grid-cols-1 gap-3 px-6 pb-6 sm:grid-cols-2">
+            {portfolioContent.skills.map((group) => (
+              <div key={group.category}>
+                <h3 className="text-xs font-semibold uppercase tracking-wider text-emerald-200">{group.category}</h3>
+                <p className="mt-1 text-xs leading-5 text-white/65">{group.items.join(" · ")}</p>
+              </div>
+            ))}
+          </div>
         </Card>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid md:grid-cols-5 lg:grid-cols-3">
