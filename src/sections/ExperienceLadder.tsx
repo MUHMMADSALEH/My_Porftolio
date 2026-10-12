@@ -33,9 +33,7 @@ export const ExperienceLadder = () => {
             Career Journey
           </p>
         </div>
-        <h2 className="font-serif text-3xl md:text-5xl mt-4 text-center tracking-tight text-white">
-          Experience Ladder
-        </h2>
+
         <p className="text-white/60 mt-4 max-w-2xl mx-auto text-center md:text-lg">
           A track record of engineering backend logic, async queues, and SaaS platforms in fast-paced production environments.
         </p>
@@ -82,6 +80,8 @@ export const ExperienceLadder = () => {
           <div className="flex flex-col gap-10">
             {experiences.map((item, index) => {
               const isCurrent = item.endDate === "Present";
+              const isLatest = index === 0;
+              const isHighlighted = isCurrent || isLatest;
               const isExpanded = !!expandedIds[item.id];
               const durationText = formatDuration(item.startDate, item.endDate);
               const displayPeriod = formatDisplayPeriod(item.startDate, item.endDate);
@@ -100,7 +100,7 @@ export const ExperienceLadder = () => {
                   {/* Timeline Node Marker */}
                   <div
                     className={`absolute left-2.5 md:left-6.5 top-5 -translate-x-1/2 flex items-center justify-center rounded-full transition-transform ${
-                      isCurrent
+                      isHighlighted
                         ? "size-5 bg-emerald-400 ring-4 ring-emerald-500/20 shadow-lg shadow-emerald-500/50"
                         : "size-4 bg-gray-700 border-2 border-white/40"
                     }`}
@@ -114,7 +114,7 @@ export const ExperienceLadder = () => {
                   {/* Experience Card */}
                   <div
                     className={`relative rounded-3xl p-6 md:p-8 border transition-all ${
-                      isCurrent
+                      isHighlighted
                         ? "bg-gray-900/90 border-emerald-500/40 shadow-xl shadow-emerald-500/5"
                         : "bg-gray-900/60 border-white/10 hover:border-white/20"
                     }`}
@@ -133,11 +133,15 @@ export const ExperienceLadder = () => {
                           <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight">
                             {item.role}
                           </h3>
-                          {isCurrent && (
+                          {isCurrent ? (
                             <span className="px-2.5 py-0.5 text-xs font-semibold rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
                               Current Role
                             </span>
-                          )}
+                          ) : isLatest ? (
+                            <span className="px-2.5 py-0.5 text-xs font-semibold rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+                              Latest Role
+                            </span>
+                          ) : null}
                         </div>
                         <p className="text-base md:text-lg font-medium text-emerald-400 mt-1">
                           {item.company}
@@ -187,9 +191,8 @@ export const ExperienceLadder = () => {
                           <span>Key Achievements & Impact ({item.achievements.length})</span>
                         </span>
                         <ArrowDownIcon
-                          className={`size-4 text-emerald-400 transition-transform duration-200 ${
-                            isExpanded ? "rotate-180" : ""
-                          }`}
+                          className={`size-4 text-emerald-400 transition-transform duration-200 ${isExpanded ? "rotate-180" : ""
+                            }`}
                           aria-hidden="true"
                         />
                       </button>
@@ -207,18 +210,7 @@ export const ExperienceLadder = () => {
                                 className="size-5 shrink-0 text-emerald-400 mt-0.5"
                                 aria-hidden="true"
                               />
-                              <span>
-                                {achievement.includes("[ADD METRIC]") ? (
-                                  <>
-                                    {achievement.replace("[ADD METRIC]", "")}
-                                    <span className="text-amber-400/90 text-xs font-mono ml-1 px-1.5 py-0.5 bg-amber-500/10 rounded border border-amber-500/20">
-                                      [ADD METRIC]
-                                    </span>
-                                  </>
-                                ) : (
-                                  achievement
-                                )}
-                              </span>
+                              <span>{achievement}</span>
                             </li>
                           ))}
                         </ul>

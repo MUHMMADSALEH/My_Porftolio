@@ -12,7 +12,7 @@ import { portfolioContent } from "@/content/portfolio";
 import {motion} from "framer-motion"
 import { useRef } from "react";
 const hobbies = [{
-  title: "playing Cricket",
+  title: "Playing Cricket",
   emoji: "🏏",
   left:"5%",
   top:"0%"
@@ -23,7 +23,7 @@ const hobbies = [{
   top:"10%"
 }, {
   title: "Hiking",
-  emoji: "🚶‍♀️,",
+  emoji: "🚶‍♀️",
   left:"10%",
   top:"35%"
 }, {
@@ -47,7 +47,7 @@ export const AboutSection = () => {
 
   return <div id="about" className="py-20 lg:py-28 ">
     <div className="container">
-      <SectionHeader eyebrow="About me" title="Backend systems, built for real products." description={portfolioContent.introduction} />
+      <SectionHeader eyebrow="About Me" title="Backend systems, built for real products." description={portfolioContent.introduction} />
       <div className="mt-20 flex flex-col gap-8">
         <div className=" grid grid-cols-1 gap-8 md:grid md:grid-cols-5  lg:grid-cols-3">
         <Card className="h-[320px] md:col-span-2 lg:col-span-1"  >
@@ -73,7 +73,7 @@ export const AboutSection = () => {
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid md:grid-cols-5 lg:grid-cols-3">
         <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
-        <CardHeader   title="Beyond the Code" description="Explore my intersts and hobbies beyond the digital realm." className="" />
+        <CardHeader   title="Beyond the Code" description="Explore my interests and hobbies beyond the digital realm." className="" />
           <div className="relative flex-1 " ref={constraintRef}>
             {
               hobbies.map(hobby => (
@@ -86,11 +86,11 @@ export const AboutSection = () => {
           </div>
         </Card>
         <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
-          <Image src={mapImage} alt="map image" className="h-full w-full object-cover object-left-top"/>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20  rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 afte:content-[''] after:absolute after:inset-0 after:outline after:ouline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30 ">
+          <Image src={mapImage} alt="Map illustrating location in Lucknow, India" className="h-full w-full object-cover object-left-top"/>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20  rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30 ">
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping "></div>
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
-          <Image src={smileMemoji} alt="smilememoji"  />
+          <Image src={smileMemoji} alt="Smiling memoji avatar"  />
 
           </div>
         </Card>

@@ -34,8 +34,8 @@ export const TestimonialsSection = () => (
   <section className="py-16 lg:py-24">
     <div className="container">
       <SectionHeader
-        eyebrow="Recommendation"
-        title="A note from TechCurators"
+        eyebrow="Recommendations"
+        title="Words from colleagues and leadership"
         description="Recommendations from people I worked with at TechCurators and SDLC Corp."
       />
       <div className="mt-12 grid gap-6 lg:mt-20 md:grid-cols-2">
@@ -44,7 +44,7 @@ export const TestimonialsSection = () => (
             <div className="flex items-center gap-4">
               <div className="inline-flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-full bg-gray-700">
                 {recommendation.avatar ? (
-                  <Image src={recommendation.avatar} alt="" className="max-h-full" />
+                  <Image src={recommendation.avatar} alt={recommendation.name} className="max-h-full" />
                 ) : (
                   <span aria-hidden="true" className="font-semibold text-emerald-200">{recommendation.initials}</span>
                 )}

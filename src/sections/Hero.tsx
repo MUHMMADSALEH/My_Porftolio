@@ -14,7 +14,7 @@ export const HeroSection = () => {
   // console.log(memojiImage);
   return (
     <div className="py-32 md:py-48 lg:py-60 relative z-0  overflow-x-clip">
-      <div className="absolute inset-0 [mask-image:linear-grdient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
       <div
         className="absolute inset-0 -z-30 opacity-5"
         style={{ backgroundImage: `url(${grainImage.src})` }}
@@ -75,18 +75,18 @@ export const HeroSection = () => {
             {portfolioContent.headline}
           </h1>
           <p className="mt-4 text-center  text-white/60 md:text-lg">
-            {portfolioContent.hero} {portfolioContent.introduction}
+            {portfolioContent.heroSummary}
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
           <Link to="projects" smooth={true} duration={500}>
           <button className="px-6  h-12  border border-white/15 rounded-xl  inline-flex items-center z-10 cursor-pointer  gap-2">
-            <span className="font-semibold cursor-pointer z-10">Explore My work</span>
+            <span className="font-semibold cursor-pointer z-10">Explore My Work</span>
             <ArrowDown className="size-4 " />
           </button>
           </Link>
           <a href="/MUHMMAD_SALEH.pdf" download="MUHMMAD_SALEH.pdf" className="px-6 h-12 border border-white/15 rounded-xl inline-flex items-center gap-2">
-            <span className="font-semibold">Download resume</span>
+            <span className="font-semibold">Download Resume</span>
             <ArrowDown className="size-4" />
           </a>
           <button onClick={()=> window.location.href = "mailto:khanmohdsaleh2002@gmail.com?subject=Project Inquiry&body=Hello, I would like to discuss a project with you."} className="inline-flex  items-center gap-2 bg-white  text-gray-900 font-semibold border border-white cursor-pointer z-10 rounded-xl h-12 px-4 ">

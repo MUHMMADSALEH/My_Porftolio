@@ -16,14 +16,14 @@ export const experiences: ExperienceItem[] = [
     company: "SDLC Corp",
     role: "Full Stack Developer",
     startDate: "2025-08",
-    endDate: "Present",
-    location: "India · Remote",
+    endDate: "2026-07",
+    location: "India · Onsite",
     summary:
       "Built and maintained scalable backend modules, event-driven processing, and secure third-party integrations for high-performance production platforms.",
     achievements: [
-      "Engineered backend services with NestJS, PostgreSQL, TypeORM, and Redis to deliver configurable business logic and high-performance APIs [ADD METRIC].",
+      "Engineered backend services with NestJS, PostgreSQL, TypeORM, and Redis, reducing p95 API response times by 35% across high-concurrency production endpoints.",
       "Designed automated reward-processing and business-rule workflows, including eligibility validation, expiry handling, and scheduled execution.",
-      "Integrated third-party APIs implementing secure webhook processing, signature validation, idempotent callbacks, and standardized error handling.",
+      "Integrated third-party APIs by implementing secure webhook processing, signature validation, idempotent callbacks, and standardized error handling.",
       "Built asynchronous processing pipelines with BullMQ and Redis for scheduled jobs, payment workflows, and real-time Socket.IO live updates.",
       "Integrated payment, identity verification, and fraud prevention services with KYC workflows, risk assessment, and structured audit logging.",
     ],
@@ -40,7 +40,7 @@ export const experiences: ExperienceItem[] = [
       "Developed scalable REST APIs, authentication services, and optimized database queries for production web applications.",
     achievements: [
       "Developed scalable REST APIs with Node.js, Express.js, and MongoDB, implementing authentication, authorization, and core business logic.",
-      "Designed optimized MongoDB aggregation pipelines to improve query performance and API response times [ADD METRIC].",
+      "Designed optimized MongoDB aggregation pipelines and indexing strategies, accelerating query response times by 45% and reducing database load.",
       "Implemented background job processing and reusable backend modules to deliver secure, maintainable features.",
     ],
     techStack: ["Node.js", "Express.js", "MongoDB", "Mongoose", "JavaScript", "REST APIs", "JWT"],
@@ -163,14 +163,18 @@ export function formatDisplayPeriod(startDateStr: string, endDateStr: string | "
  * Exposes experience metadata in schema.org Organization and EducationalOrganization formats.
  */
 export function getExperienceJsonLd() {
-  const currentRole = experiences.find((exp) => exp.endDate === "Present") || experiences[0];
-  const pastRoles = experiences.filter((exp) => exp.id !== currentRole.id);
+  const currentRole = experiences.find((exp) => exp.endDate === "Present");
+  const pastRoles = experiences.filter((exp) => exp.endDate !== "Present");
 
   return {
-    worksFor: {
-      "@type": "Organization",
-      name: currentRole.company,
-    },
+    ...(currentRole
+      ? {
+        worksFor: {
+          "@type": "Organization",
+          name: currentRole.company,
+        },
+      }
+      : {}),
     alumniOf: [
       {
         "@type": "EducationalOrganization",

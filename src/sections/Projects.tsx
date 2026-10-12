@@ -10,10 +10,10 @@ export const ProjectsSection = () => (
     <div className="container">
       <div className="flex justify-center">
         <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent">
-          Selected work
+          Selected Work
         </p>
       </div>
-      <h2 className="font-serif text-3xl mt-6 text-center">Backend and full-stack projects</h2>
+      <h2 className="font-serif text-3xl mt-6 text-center">Backend and Full-Stack Projects</h2>
       <p className="text-white/60 mt-4 max-w-2xl mx-auto text-center md:text-lg lg:text-xl">
         {portfolioContent.projectsIntro}
       </p>

@@ -1,4 +1,4 @@
-﻿---
+---
 name: nextjs-root-cause-debugging
 description: Diagnoses Next.js App Router errors involving React Server Components, SSR, hydration, module resolution, and dependency compatibility. Use when debugging runtime errors.
 ---

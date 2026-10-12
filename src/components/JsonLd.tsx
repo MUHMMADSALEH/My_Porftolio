@@ -44,7 +44,7 @@ export function JsonLd() {
       "Docker",
       "REST APIs",
     ],
-    worksFor: experienceData.worksFor,
+    ...(experienceData.worksFor ? { worksFor: experienceData.worksFor } : {}),
     alumniOf: experienceData.alumniOf,
   };
 

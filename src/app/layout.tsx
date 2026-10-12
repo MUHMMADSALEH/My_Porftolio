@@ -90,7 +90,13 @@ export default function RootLayout({
 
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
+      <body
+        className={twMerge(
+          inter.variable,
+          calistoga.variable,
+          "bg-gray-900 text-white antialiased font-sans selection:bg-emerald-300 selection:text-gray-950"
+        )}
+      >
         <JsonLd />
         {analyticsId && (
           <>
@@ -108,14 +114,6 @@ export default function RootLayout({
             </Script>
           </>
         )}
-      </head>
-      <body
-        className={twMerge(
-          inter.variable,
-          calistoga.variable,
-          "bg-gray-900 text-white antialiased font-sans selection:bg-emerald-300 selection:text-gray-950"
-        )}
-      >
         {children}
       </body>
     </html>
